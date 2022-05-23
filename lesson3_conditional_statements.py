@@ -100,3 +100,18 @@ else:
 debugging = True
 if debugging: print("We are testing a code.")
 # We are testing a code.
+
+
+# ------------------------------------------------------
+# тренарний оператор    <expr1> if <conditional_expr> else <expr2>
+#
+x = y = 40
+z = 1 + x if x > y else y + 2
+print(z)
+# 42
+# ------------------------------------------------------
+# () - для зрозумілості пріоритету виконання: (1дія) 3дія (2дія)
+x = y = 40
+z = (1 + x) if x > y else (y + 2)
+print(z)
+# 42
