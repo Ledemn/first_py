@@ -6,6 +6,9 @@
 
 number = float(input("Введіть число: "))
 
+# додати перевірку некоректних данних.
+# .isdigit()
+
 if number % 2:
     print("Непарне")
 else:
