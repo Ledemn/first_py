@@ -25,6 +25,8 @@ elif len(str(abs(number))) == 1:
     # >>> number = -123
     # >>> number
     # >>> -123
+    # >>> len(number)
+    # >>> 4
     # >>> a = abs(number)   -функція abs() відкидає знак
     # >>> a
     # >>> 123
