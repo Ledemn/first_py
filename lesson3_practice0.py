@@ -10,6 +10,6 @@ number = float(input("Введіть число: "))
 # .isdigit()
 
 if number % 2:
-    print("Непарне")
+    print("Непарне")    # exm. 5 % 2 = 1
 else:
     print("Парне")
