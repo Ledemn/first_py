@@ -163,16 +163,57 @@ for i in a:                     # 1. iter() for a
 
 #
 # 2.4 --------------------------------------------------------- :
-print('\n\n', '---' * 5, '4.2.4:')
+print('\n\n', '---' * 10, '4.2.4: range()')
+
+x = range(5)
+for i in x:
+    print(i)
+
+
+print('\n', '-------range(10)')
+
+for i in range(10):
+    print(i)
+
+
+print('\n', '-------range(2, 10)')
+
+for i in range(2, 10):
+    print(i)
+
+
+print('\n', '-------range(32, 50, 5)')
+
+for i in range(32, 50, 5):
+    print(i)
+
+
+print('\n', '-------range(100, 90, 2)')
+
+for i in range(100, 90, -2):
+    print(i)
 
 
 
 #
 # 2.5 --------------------------------------------------------- :
-print('\n\n', '---' * 5, '4.2.5:')
+print('\n\n', '---' * 10, '4.2.5: break, continue, else')
+print('-------break')
+for i in ["foo", "bar", "baz", "qux"]:
+    if 'b' in i:
+        break
+    print(i)
 
 
+print('\n', '-------continue')
+for i in ["foo", "bar", "baz", "qux"]:
+    if 'b' in i:
+        continue
+    print(i)
 
-#
-# 2.6 --------------------------------------------------------- :
-print('\n\n', '---' * 5, '4.2.6:')
+
+print('\n', '-------else')
+for i in ["foo", "bar", "baz", "qux"]:
+    print(i)
+else:
+    print('Done.')  # Will execute
