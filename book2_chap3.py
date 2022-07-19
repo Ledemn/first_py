@@ -209,10 +209,90 @@ names.sort()
 numbers.sort()
 
 print(names)
-print(numbers)
-"""
+print(numbers, '\n')
+""" TIP:
 If your list contains strings with a mixture of uppercase and
 lowercase letters, and if the results of the sort don't look right, try
 replacing .sort() with .sort(key=lambda s: s.lower()) and
 then running the code again.
+"""
+
+# Need this modules for the dates.
+import datetime as dt
+
+# Create a list of dates, empty for starters
+datelist = []
+"""
+Then we appended one date at a time to the list using the
+dt.date(year,month,day) syntax.
+"""
+# Append dates one at time so code is easier to read.
+datelist.append(dt.date(2022, 7, 19))
+datelist.append(dt.date(2017, 6, 4))
+datelist.append(dt.date(2015, 12, 12))
+datelist.append(dt.date(2001, 4, 10))
+print(datelist)
+
+datelist.sort()
+for date in datelist:
+    print(f"{date:%d/%m/%Y}")
+print()
+
+"""
+If you want to sort items in descending (reverse) order, put reverse=True inside the
+sort() parentheses (and don't forget to make the first letter of True
+uppercase).
+"""
+names.sort(reverse=True)
+print(names)
+numbers.sort(reverse=True)
+print(numbers)
+print()  # This just adds a blank line to the output.
+
+
+
+#
+# Reversing a list  -------------------------------------------
+# Create a list of strings.
+names = ["Zara", "Lupe", "Hong", "Alberto", "Jake"]
+# Reverse the list.
+names.reverse()
+# Print the list.
+print(names, '\n')
+
+
+
+#
+# Copying a list  -------------------------------------------
+"""
+If you need to work with a copy of a list so as not to alter the original
+list, use the .copy() method.
+"""
+# Create a list of strings.
+names = ["Zara", "Lupe", "Hong", "Alberto", "Jake"]
+
+# Make a copy of the list.
+backward_names = names.copy()
+# Reverse the copy.
+backward_names.reverse()
+
+print(names)
+print(backward_names)
+print()
+
+
+""" Methods for Working with Lists ---------------------------------
+append()                Adds an item to the end of the list
+clear()                 Removes all items from the list, leaving it empty
+copy()                  Makes a copy of a list
+count()                 Counts how many times an element appears in a list
+extend()                Appends the items from one list to the end of another list
+index()                 Returns the index number (position) of an element in a list
+insert()                Inserts an item into the list at a specific position
+pop()                   Removes an element from the list, and provides a copy of that
+                        item that you can store in a variable
+remove()                Removes one item from the list
+reverse()               Reverses the order of items in the list
+sort()                  Sorts the list in ascending order
+sort(reverse=True)      Sorts the list in descending order
 """
