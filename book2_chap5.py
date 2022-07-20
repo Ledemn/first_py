@@ -7,3 +7,23 @@ Seeing how to pass information to a function
 Returning values from a function
 Understanding anonymous functions
 """
+
+
+def hello():
+    print('Hello')
+
+
+hello()
+print('------------------------------1')
+# ------------------------------
+
+
+def hello():    # Practice function
+    """ A docstring describing the function. """
+    print('Hello')
+
+
+hello()
+print('------------------------------2')
+# ------------------------------
+
