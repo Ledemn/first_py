@@ -148,20 +148,75 @@ the original list in a mutable (changeable) format; it receives only a
 pointer to the list, which indicates the list's location. Then the function
 can get the list's contents. The function can do anything it likes with its
 own copy of the list, but the original list remains unchanged.
+
 After you have a copy of the list inside the function, you can sort that
 copy using the simple sort() method. Or, if you want to sort in
 descending order, use sort(reverse=True). """
 
 
 def alphabetize(original_list=[]):  # ...
-    """ Pass any list in square brackets, displays a string with items sorted """
-    
+    """ Pass any list in square brackets, displays a string with items sorted. """
+    # Inside the function make a working copy of the list passed in.
+    """
+    Because the function can't alter the list directly, it first makes a copy of
+    the original list (the one that was passed) in a new list called
+    sorted_list, with this line of code: """
+    sorted_list = original_list.copy()
+
+    # Sort the working copy.
+    """ At this point, sorted_list isn't really sorted; it’s still just a copy of the
+    original. """
+    print(sorted_list, type(sorted_list))          # before .sort()
+
+    """ The next line of code does the sorting: """
+    sorted_list.sort()
+    print(sorted_list, type(sorted_list))          # after .sort()
+
+    # Make a new empty string for output.
+    """ So the next line creates a new variable name, final_list and,
+    after the = sign, starts the variable off as an empty string (two single
+    quotation marks with no space between): """
+    final_list = ''
+
+    # Loop through sorted list and append name and comma and space.
+    """ This loop loops through the sorted list and adds each item in the list,
+    separated by a comma and a space, to the final_list string:
+    """
+    for name in sorted_list:
+        final_list += name + ', '
+        print(final_list, type(final_list))         # $: -v 8)
+
+    # Knock off last comma and space if the string is not blank.
+    """ When that’s done, if anything was added to final_list, it will have an
+    extra comma and a space at the end. The following statement removes
+    those last two characters, assuming the list is at least two characters in length:
+    """
+    final_list = final_list[:-2]
+    # Print the alphabetized list.
+    print(final_list, type(final_list))
 
 
+al = list('qwertyuiop')
+print(al, type(al), '\n')
+
+alphabetize(al)
+print()
+alphabetize(['Schrepfer', 'Maier', 'Santiago', 'Adams'])
+"""
+As always, you can also pass in the name of a variable that contains the
+list, as in this example:
+
+names = ['Schrepfer', 'Maier', 'Santiago', 'Adams']
+alphabetize(names)
+"""
+print()
 
 
 print('------------------------------8')
-# ------------------------------------------------------------
+# Passing in an arbitrary number of arguments -----------------------------
+
+
+
 
 
 print('------------------------------9')
