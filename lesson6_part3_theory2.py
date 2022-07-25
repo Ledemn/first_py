@@ -51,7 +51,7 @@ def outer_func():
 
 
 outer_func()
-print()
+print()  # -------------------------------------------------
 
 # __main__
 print(dir())
