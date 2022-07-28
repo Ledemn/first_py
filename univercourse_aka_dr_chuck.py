@@ -161,4 +161,148 @@ print()
 
 
 #
-print('-----' * 2, ':')  # ---------------
+print('\n', '-----', 'Looking at In...')  # ---------------
+for i in [5, 4, 3, 2, 1]:
+    print(i)
+
+
+#
+print('\n', '-----', 'Loop Idioms: ')  # through a Set -------
+print('Before')
+for thing in [9, 41, 12, 3, 74, 15]:
+    print(thing)
+print('After')
+
+
+
+#
+print('\n', '-----', 'Finding the largest value.')  # ---------------
+
+largest_so_far = -1
+print('Before:', largest_so_far)
+for the_num in [9, 41, 12, 3, 74, 15]:
+    if the_num > largest_so_far:
+        largest_so_far = the_num
+    print(largest_so_far, the_num)
+print('After:', largest_so_far)
+
+""" We make a variable that contains the largest value we have seen so far.
+If the current number we are looking at is larger, it is the new largest
+value we have seen so far.
+"""
+
+
+
+#
+print('\n', '-----', 'Counting in a loop.')  # ---------------
+
+zork = 0
+print('Before', zork)
+for thing in [9, 41, 12, 3, 74, 15]:
+    zork += 1
+    print(zork, thing)
+print('After', zork)
+
+
+
+#
+print('\n', '-----', 'Summing in a loop.')  # ---------------
+
+zork = 0
+print('Before', zork)
+for thing in [9, 41, 12, 3, 74, 15]:
+    zork = zork + thing
+    print(zork, thing)
+print('After', zork)
+
+""" To add up a value we encounter in a loop, we introduce a sum variable that
+starts at 0 and we add the value to the sum each time through the loop.
+
+Щоб додати значення, яке ми зустрічаємо в циклі, ми вводимо змінну суми,
+яка починається з 0, і ми додаємо значення до суми кожного разу в циклі.
+"""
+
+
+
+#
+print('\n', '-----', 'Finding the Average in a loop.')  # ---------------
+
+count = 0
+sum = 0
+print('Before', count, sum)
+for value in [9, 41, 12, 3, 74, 15]:
+    count += 1
+    sum = sum + value
+    print(count, sum, value)
+print(f"'After' {count} {sum} {sum / count:,.3f}")
+
+""" An average just combines the counting and sum patterns and
+divides when the loop is done. """
+
+
+
+#
+print('\n', '-----', 'Filtering in a Loop.')  # ---------------
+
+print('Before')
+for value in [9, 41, 12, 3, 74, 15]:
+    if value > 20:
+        print('Large number', value)
+print('After')
+
+""" We use an if statement in the loop to catch/filter the values
+we are looking for. """
+
+
+
+#
+print('\n', '-----', 'Search Using a Boolean Variable.')  # ---------------
+
+found = False
+print('Before', found)
+for value in [9, 41, 12, 3, 74, 15]:
+    if value == 3:
+        found = True
+        print(found, value)
+        break
+    print(found, value)
+print('After', found)
+
+""" If we just want to search and know if a value was found, we use
+a variable that starts at False and is set to True as soon as we find
+what we are looking for. """
+
+
+
+#
+print('\n', '-----', 'Finding the smallest value.')  # ---------------
+
+smallest = None     # It's like a marker. It's not empty, but it's a nothing!
+print('Before', smallest)
+for value in [9, 41, 12, 3, 74, 15]:
+    if smallest is None:    # is - stronger than equal(==)!
+        smallest = value
+    elif value < smallest:
+        smallest = value
+    print(smallest, value)
+
+print('After', smallest)
+
+""" We still have a variable that is the smallest so far. The first time
+through the loop smallest is None, so we take the first value to be the smallest. """
+
+
+
+#
+print('\n', '-----', 'The "is" and "is not" Operators.')  # ---------------
+"""
+a) Python has an IS operator that can be used in logical expressions.
+b) Implies "is the same as"
+c) Similar to, but stronger than "==":
+    0 == 0.0 True
+    0 is 0.0 False
+
+d) IS NOT also is a logical operator.
+
+We use them with Boolean and None (!)
+"""
