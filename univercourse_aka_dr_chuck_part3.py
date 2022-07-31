@@ -17,7 +17,7 @@ print(fhand)    # <_io.TextIOWrapper name='main.py' mode='r' encoding='UTF-8'>
 
 
 #
-print('\n', '-----', 'The Newline Character')  # ---------------
+print('\n\n', '-----', 'The Newline Character', '-----')  # ---------------
 stuff = 'Hello\nWorld!'
 print(stuff)
 stuff = 'X\nY'
@@ -26,7 +26,7 @@ print(len(stuff))   # Newline is still one character - not two.
 
 
 #
-print('\n', '-----', 'Reading Files in Python')  # ---------------
+print('\n\n', '-----', 'Reading Files in Python', '-----')  # ---------------
 """
 ! A file handle open for read can be treated as a sequence of
 strings where each line in the file is a string in the sequence.
@@ -43,22 +43,48 @@ for cheese in xfile:
 print(type(xfile))
 
 
-#
-print('\n', '-----', '_')  # ---------------
-
 
 #
-print('\n', '-----', '_')  # ---------------
+print('\n\n', '-----', 'Counting Lines in a File', '-----')  # ---------------
+fhand = open('/home/s-li/mbox.txt')
+count = 0
+for line in fhand:
+    count += 1
+print('Line Count: ', count)
 
-
-#
-print('\n', '-----', '_')  # ---------------
-
-
-#
-print('\n', '-----', '_')  # ---------------
 
 
 #
-print('\n', '-----', '_')  # ---------------
+print('\n\n', '-----', 'Reading the *Whole* File', '-----')  # ---------------
+# .read()
+fhand = open('/home/s-li/mbox.txt')
+inp = fhand.read()
+print(len(inp))
+print(inp[:65])
+
+
+
+#
+print('\n\n', '-----', 'Searching Through a File', '-----')  # ---------------
+"""
+We can put an IF statement in our FOR loop to only print
+lines that meet some criteria.
+"""
+
+
+
+#
+print('\n', '-----', '_', '-----')  # ---------------
+
+
+#
+print('\n', '-----', '_', '-----')  # ---------------
+
+
+#
+print('\n', '-----', '_', '-----')  # ---------------
+
+
+#
+print('\n', '-----', '_', '-----')  # ---------------
 
